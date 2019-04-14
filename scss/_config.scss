@@ -1,0 +1,20 @@
+// Variables
+$primary-color: #0288d1;
+$secondary-color: #93cb52;
+$light-color: #eee;
+$medium-color: #ccc;
+$dark-color: #333;
+$internet-color: #438496;
+$design-color: #0b3c5d;
+$technology-color: #fc4a1a;
+$art-color: #1b7b34;
+$general-color: #025ddd;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
