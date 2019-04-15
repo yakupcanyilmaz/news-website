@@ -767,7 +767,6 @@ img {
   .latest-container .latest-article {
     width: 453px;
     position: relative;
-    min-height: 1px;
     vertical-align: top;
     padding-left: 20px;
     padding-right: 20px;
