@@ -1,9 +1,10 @@
-// Sticky menu background
-$(window).scroll(function() {
-  var navbarDesktop = $("#navbar-desktop");
+// Sticky menu
+window.addEventListener("scroll", function() {
   if (window.scrollY > 100) {
-    navbarDesktop.addClass("visible");
+    document.querySelector("#navbar-desktop").className =
+      "navbar visible bg-primary";
   } else {
-    navbarDesktop.removeClass("visible");
+    document.querySelector("#navbar-desktop").className =
+      "navbar hidden bg-primary";
   }
 });

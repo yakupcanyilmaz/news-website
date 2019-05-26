@@ -5,6 +5,12 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
@@ -23,14 +29,16 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Slab"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/main.css" />
+
     <title>Global Journal</title>
   </head>
   <body>
-    <input type="checkbox" id="toggler" />
+    <input type="checkbox" id="toggler" class="d-lg-none-down" />
     <!-- Header -->
-    <header id="header">
-      <div class="header-top bg-light hidden-xs hidden-sm">
+    <header id="header" class="d-lg-none-down">
+      <div id="header-top" class="bg-light">
         <div class="container">
           <div class="d-flex align-items-center justify-content-between py-1">
             <div class="d-flex">
@@ -72,9 +80,9 @@
         </div>
       </div>
 
-      <div class="navbar header-bottom bg-primary hidden-xs hidden-sm">
-        <div class="container">
-          <ul class="menu-1">
+      <div id="header-down" class="navbar bg-primary">
+        <div class="container d-flex align-items-center">
+          <ul class="menu-1 d-flex align-items-center">
             <li><a href="#">Home</a></li>
             <li><a href="#">General</a></li>
             <li><a href="#">Technology / Science</a></li>
@@ -87,10 +95,7 @@
     </header>
 
     <!-- Navbar Desktop Screen -->
-    <div
-      id="navbar-desktop"
-      class="navbar hidden fixed-top bg-primary hidden-xs hidden-sm"
-    >
+    <div id="navbar-desktop" class="navbar hidden bg-primary">
       <div class="container d-flex align-items-center">
         <div class="navbar-desktop-logo">
           <a href="#"
@@ -110,23 +115,19 @@
     </div>
 
     <!-- Navbar Mobile Screen -->
-    <div id="navbar-mobile" class="fixed-top bg-primary hidden-lg hidden-md">
-      <div class="container">
-        <div class=" navbar-mobile-container">
-          <label for="toggler" class="toggler-button"
-            ><i class="fa fa-bars"></i
-          ></label>
-          <div class="navbar-mobile-logo">
-            <a href="#"
-              ><img src="img/logo.svg" alt="Global Journal" class="logo-sm"
-            /></a>
-          </div>
-        </div>
+    <div id="navbar-mobile" class="d-lg-none-up bg-primary text-center">
+      <label for="toggler" class="toggler-button"
+        ><i class="fa fa-bars"></i
+      ></label>
+      <div class="navbar-mobile-logo">
+        <a href="#"
+          ><img src="img/logo.svg" alt="Global Journal" class="logo-sm"
+        /></a>
       </div>
     </div>
 
     <!-- Sidebar -->
-    <div id="sidebar" class="bg-primary">
+    <div id="sidebar" class="d-lg-none-up bg-primary">
       <ul class="menu-2">
         <li><a href="#">Home</a></li>
         <li><a href="#">General</a></li>
@@ -167,693 +168,598 @@
     </div>
 
     <!-- Home Articles -->
-    <div id="content">
+
+    <div id="showcase" class="article-box content-container">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12">
-            <div class="row">
-              <div class="module col-lg-12 col-md-12 col-sm-12">
-                <div class="wrapper">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="article-grid">
-                        <article class="article-item">
-                          <div class="article-header">
-                            <span class="article-category">
-                              <a href="#" class="bg-technology"
-                                >Technology / Science</a
-                              >
-                            </span>
-                            <h2 class="article-title">
-                              <a href="#">
-                                Lorem ipsum dolor sit amet
-                              </a>
-                            </h2>
-                            <div class="article-meta">
-                              <div class="meta-item herald-date">
-                                <i class="far fa-clock"></i>
-                                <span class="updated">14/04/2019</span>
-                              </div>
-                              <div class="meta-item herald-time">
-                                <i class="fas fa-book"></i>
-                                <span>2 min read</span>
-                              </div>
-                            </div>
-                            <div class="article-content">
-                              <p>
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Aspernatur fugit doloribus
-                                quasi voluptatem, voluptatibus fugiat nemo
-                                ratione consectetur.
-                              </p>
-                            </div>
-                          </div>
-                          <a href="#" class="article-img">
-                            <img
-                              width="559"
-                              height="520"
-                              src="img/articles/technology-01.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </article>
-                        <article class="article-item">
-                          <div class="article-header">
-                            <span class="article-category">
-                              <a href="#" class="bg-internet"
-                                >Internet / Enterprise</a
-                              >
-                            </span>
-                            <h2 class="article-title">
-                              <a href="#">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit
-                              </a>
-                            </h2>
-                            <div class="article-meta">
-                              <div class="meta-item herald-date">
-                                <i class="far fa-clock"></i>
-                                <span class="updated">13/04/2019</span>
-                              </div>
-                              <div class="meta-item herald-time">
-                                <i class="fas fa-book"></i>
-                                <span>2 min read</span>
-                              </div>
-                            </div>
-                          </div>
-                          <a href="#" class="article-img">
-                            <img
-                              width="379"
-                              height="259"
-                              src="img/articles/internet-01.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </article>
-                        <article class="article-item">
-                          <div class="article-header">
-                            <span class="article-category">
-                              <a href="#" class="bg-design"
-                                >Design / Innovation</a
-                              >
-                            </span>
-                            <h2 class="article-title">
-                              <a href="#">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                              </a>
-                            </h2>
-                            <div class="article-meta">
-                              <div class="meta-item herald-date">
-                                <i class="far fa-clock"></i>
-                                <span class="updated">13/04/2019</span>
-                              </div>
-                              <div class="meta-item herald-time">
-                                <i class="fas fa-book"></i>
-                                <span>3 min read</span>
-                              </div>
-                            </div>
-                          </div>
-                          <a href="#" class="article-img">
-                            <img
-                              width="379"
-                              height="259"
-                              src="img/articles/design-01.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </article>
-                        <article class="article-item">
-                          <div class="article-header">
-                            <span class="article-category">
-                              <a href="#" class="bg-art">Art / Culture</a>
-                            </span>
-                            <h2 class="article-title">
-                              <a href="#">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                              </a>
-                            </h2>
-                            <div class="article-meta">
-                              <div class="meta-item herald-date">
-                                <i class="far fa-clock"></i>
-                                <span class="updated">13/04/2019</span>
-                              </div>
-                              <div class="meta-item herald-time">
-                                <i class="fas fa-book"></i>
-                                <span>2 min read</span>
-                              </div>
-                            </div>
-                          </div>
-                          <a href="#" class="article-img">
-                            <img
-                              width="379"
-                              height="259"
-                              src="img/articles/art-01.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </article>
-                        <article class="article-item">
-                          <div class="article-header">
-                            <span class="article-category">
-                              <a href="#" class="bg-general">General</a>
-                            </span>
-                            <h2 class="article-title">
-                              <a href="#">
-                                Lorem ipsum dolor sit amet consectetur
-                              </a>
-                            </h2>
-                            <div class="article-meta">
-                              <div class="meta-item herald-date">
-                                <i class="far fa-clock"></i>
-                                <span class="updated">13/04/2019</span>
-                              </div>
-                              <div class="meta-item herald-time">
-                                <i class="fas fa-book"></i>
-                                <span>2 min read</span>
-                              </div>
-                            </div>
-                          </div>
-                          <a href="#" class="article-img">
-                            <img
-                              width="379"
-                              height="259"
-                              src="img/articles/general-01.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
+        <div class="article-grid">
+          <article class="article-item">
+            <div class="article-header">
+              <span class="article-category">
+                <a href="#" class="bg-technology">Technology / Science</a>
+              </span>
+              <h2 class="article-title">
+                <a href="#">
+                  Lorem ipsum dolor sit amet
+                </a>
+              </h2>
+              <div class="article-meta">
+                <div class="meta-item herald-date">
+                  <i class="far fa-clock"></i>
+                  <span class="updated">14/04/2019</span>
+                </div>
+                <div class="meta-item herald-time">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
                 </div>
               </div>
-              <div class="module col-lg-12 col-md-12 col-sm-12">
-                <div class="title-container">
-                  <h2 class="title">Latest News</h2>
+              <div class="article-content">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Aspernatur fugit doloribus quasi voluptatem, voluptatibus
+                  fugiat nemo ratione consectetur.
+                </p>
+              </div>
+            </div>
+            <a href="#" class="article-img">
+              <img
+                width="559"
+                height="520"
+                src="img/articles/technology-01.jpg"
+                alt=""
+              />
+            </a>
+          </article>
+          <article class="article-item">
+            <div class="article-header">
+              <span class="article-category">
+                <a href="#" class="bg-internet">Internet / Enterprise</a>
+              </span>
+              <h2 class="article-title">
+                <a href="#">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </a>
+              </h2>
+              <div class="article-meta">
+                <div class="meta-item herald-date">
+                  <i class="far fa-clock"></i>
+                  <span class="updated">13/04/2019</span>
                 </div>
-                <div class="latest-container row ">
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/art-02.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>13/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Porro alias minus, odio aut repudiandae voluptate
-                        inventore esse.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/design-02.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Beatrice Smith</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/internet-02.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                        </a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Labore nihil quaerat perferendis at. Earum
-                        deserunt maiores, fugiat architecto nostrum sunt illo.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/technology-02.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor, sit amet consectetur
-                          adipisicing</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/design-03.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Eddie Roberts</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. In illum quis optio nostrum suscipit. Non, quae
-                        iusto!
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/design-04.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Beatrice Smith</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/art-03.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Porro alias minus, odio aut repudiandae voluptate
-                        inventore esse.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/design-05.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>12/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Beatrice Smith</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/technology-04.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                        </a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>11/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Labore nihil quaerat perferendis at. Earum
-                        deserunt maiores, fugiat architecto nostrum sunt illo.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/technology-05.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor, sit amet consectetur
-                          adipisicing</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>11/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>John Doe</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>3 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/internet-03.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#"
-                          >Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit</a
-                        >
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>11/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Eddie Roberts</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Animi cumque modi tempore aperiam fugiat nam.
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="latest-article">
-                    <div class="latest-img">
-                      <a href="#"
-                        ><img
-                          width="414"
-                          height="310"
-                          src="./img/articles/design-06.jpg"
-                          alt=""
-                      /></a>
-                    </div>
-                    <div class="latest-header">
-                      <h2 class="latest-title">
-                        <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                      </h2>
-                      <div class="latest-meta">
-                        <div class="meta-item meta-date">
-                          <i class="far fa-clock"></i>
-                          <span>11/04/2009</span>
-                        </div>
-                        <div class="meta-item meta-author">
-                          <i class="fa fa-user"></i>
-                          <span>Beatrice Smith</span>
-                        </div>
-                        <div class="meta-item meta-rtime">
-                          <i class="fas fa-book"></i>
-                          <span>2 min read</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="latest-content">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Excepturi voluptates nesciunt quod facere ipsam
-                        culpa provident hic quibusdam.
-                      </p>
-                    </div>
-                  </article>
+                <div class="meta-item herald-time">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
                 </div>
               </div>
             </div>
-          </div>
+            <a href="#" class="article-img">
+              <img
+                width="379"
+                height="259"
+                src="img/articles/internet-01.jpg"
+                alt=""
+              />
+            </a>
+          </article>
+          <article class="article-item">
+            <div class="article-header">
+              <span class="article-category">
+                <a href="#" class="bg-design">Design / Innovation</a>
+              </span>
+              <h2 class="article-title">
+                <a href="#">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+                </a>
+              </h2>
+              <div class="article-meta">
+                <div class="meta-item herald-date">
+                  <i class="far fa-clock"></i>
+                  <span class="updated">13/04/2019</span>
+                </div>
+                <div class="meta-item herald-time">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="article-img">
+              <img
+                width="379"
+                height="259"
+                src="img/articles/design-01.jpg"
+                alt=""
+              />
+            </a>
+          </article>
+          <article class="article-item">
+            <div class="article-header">
+              <span class="article-category">
+                <a href="#" class="bg-art">Art / Culture</a>
+              </span>
+              <h2 class="article-title">
+                <a href="#">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+                </a>
+              </h2>
+              <div class="article-meta">
+                <div class="meta-item herald-date">
+                  <i class="far fa-clock"></i>
+                  <span class="updated">13/04/2019</span>
+                </div>
+                <div class="meta-item herald-time">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="article-img">
+              <img
+                width="379"
+                height="259"
+                src="img/articles/art-01.jpg"
+                alt=""
+              />
+            </a>
+          </article>
+          <article class="article-item">
+            <div class="article-header">
+              <span class="article-category">
+                <a href="#" class="bg-general">General</a>
+              </span>
+              <h2 class="article-title">
+                <a href="#">
+                  Lorem ipsum dolor sit amet consectetur
+                </a>
+              </h2>
+              <div class="article-meta">
+                <div class="meta-item herald-date">
+                  <i class="far fa-clock"></i>
+                  <span class="updated">13/04/2019</span>
+                </div>
+                <div class="meta-item herald-time">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="article-img">
+              <img
+                width="379"
+                height="259"
+                src="img/articles/general-01.jpg"
+                alt=""
+              />
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="latest-news" class="article-box content-container">
+      <div class="container">
+        <div class="title-container">
+          <h2 class="title">Latest News</h2>
+        </div>
+        <div class="latest-container">
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/art-02.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>13/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+                alias minus, odio aut repudiandae voluptate inventore esse.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/design-02.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Beatrice Smith</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/internet-02.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing
+                </a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                nihil quaerat perferendis at. Earum deserunt maiores, fugiat
+                architecto nostrum sunt illo.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"
+                ><img src="./img/articles/technology-02.jpg" alt=""
+              /></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/design-03.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Eddie Roberts</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
+                illum quis optio nostrum suscipit. Non, quae iusto!
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/design-04.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Beatrice Smith</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/art-03.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+                alias minus, odio aut repudiandae voluptate inventore esse.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/design-05.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>12/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Beatrice Smith</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"
+                ><img src="./img/articles/technology-04.jpg" alt=""
+              /></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing
+                </a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>11/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+                nihil quaerat perferendis at. Earum deserunt maiores, fugiat
+                architecto nostrum sunt illo.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"
+                ><img src="./img/articles/technology-05.jpg" alt=""
+              /></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>11/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>John Doe</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/internet-03.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit</a
+                >
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>11/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Eddie Roberts</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                cumque modi tempore aperiam fugiat nam.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-article">
+            <div class="latest-img">
+              <a href="#"><img src="./img/articles/design-06.jpg" alt=""/></a>
+            </div>
+            <div class="latest-header">
+              <h2 class="latest-title">
+                <a href="#">Lorem ipsum dolor sit amet consectetur</a>
+              </h2>
+              <div class="latest-meta">
+                <div class="meta-item meta-date">
+                  <i class="far fa-clock"></i>
+                  <span>11/04/2009</span>
+                </div>
+                <div class="meta-item meta-author">
+                  <i class="fa fa-user"></i>
+                  <span>Beatrice Smith</span>
+                </div>
+                <div class="meta-item meta-rtime">
+                  <i class="fas fa-book"></i>
+                  <span>2 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Excepturi voluptates nesciunt quod facere ipsam culpa provident
+                hic quibusdam.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
-    <footer id="main-footer">
+    <footer id="footer">
       <div>
-        <div class="footer-container d-flex pt-2">
+        <div class="footer-box container d-flex pt-2">
           <div class="mb-1">
             <img src="img/logo.svg" alt="GlobalJournal" class="logo-sm" />
             <h3 class="d-inline-block align-middle">
@@ -900,6 +806,7 @@
         </div>
       </div>
     </footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>
